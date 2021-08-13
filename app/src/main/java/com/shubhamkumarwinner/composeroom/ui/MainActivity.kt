@@ -1,4 +1,4 @@
-package com.shubhamkumarwinner.composeroom
+package com.shubhamkumarwinner.composeroom.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
