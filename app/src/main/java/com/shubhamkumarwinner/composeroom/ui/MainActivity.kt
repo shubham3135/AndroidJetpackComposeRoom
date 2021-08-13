@@ -231,7 +231,7 @@ class MainActivity : ComponentActivity() {
         if (openDialog.value){
             AlertDialog(
                 onDismissRequest = { openDialog.value = false },
-                title = { Text(text = "Todo") },
+                title = { Text(text = "Update Todo") },
                 text = {
                     Column(
                         modifier = Modifier
