@@ -11,4 +11,8 @@ class TodoRepository @Inject constructor(private val dao: TodoDao) {
     }
 
     fun getAllTodos(): Flow<List<Todo>> = dao.getAllTodo()
+
+    suspend fun deleteTodo(todo: Todo) = dao.deleteTodo(todo)
+
+    suspend fun updateTodo(todo: Todo) = dao.updateTodo(todo)
 }

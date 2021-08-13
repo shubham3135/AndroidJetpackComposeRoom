@@ -1,9 +1,6 @@
 package com.shubhamkumarwinner.composeroom.todo.data
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -13,4 +10,10 @@ interface TodoDao {
 
     @Query("select * from todoTable")
     fun getAllTodo(): Flow<List<Todo>>
+
+    @Delete
+    suspend fun deleteTodo(todo: Todo)
+
+    @Update
+    suspend fun updateTodo(todo: Todo)
 }
